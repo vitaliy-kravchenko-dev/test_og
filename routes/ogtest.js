@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
     headers: {
       'accept': 'text/html',
       'accept-encoding': "gzip, deflate, sdch, br",
-      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+      'user-agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3'
     }
   };
 
