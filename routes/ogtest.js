@@ -3,10 +3,14 @@ var router = express.Router();
 var ogs = require('open-graph-scraper');
 
 /* GET users listing. */
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   var custom_url = req.query.url;
   var options = {
     url: custom_url || 'http://ogp.me/',
+    headers: {
+      'accept-language': 'en',
+      'accept': 'text/html;'
+    },
     encoding: null
   };
 
