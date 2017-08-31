@@ -11,22 +11,21 @@ router.get('/', function (req, res) {
     url: custom_url || 'http://ogp.me/',
     headers: {
       'accept-language': 'en',
-      'accept': 'text/html;'
+      'accept': 'text/html;',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
     },
     encoding: null
   };
 
-  request(options, function (err, response, body) {
+  request(options, function (err, response) {
     if (err) return res.json({error: err});
 
     result.request_result = response;
-    result.request_body = body;
+    result.request_result.body = 'removed!!';
 
     ogs(options, function (err, data) {
-      console.log(err);
       if (err) return res.json({error: err});
 
-      console.log(data);
       result.og_data = data;
 
       res.json(result);
