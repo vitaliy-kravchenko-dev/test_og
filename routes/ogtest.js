@@ -6,7 +6,8 @@ var ogs = require('open-graph-scraper');
 router.get('/', function(req, res) {
   var custom_url = req.query.url;
   var options = {
-    'url': custom_url || 'http://ogp.me/'
+    url: custom_url || 'http://ogp.me/',
+    encoding: null
   };
 
   ogs(options, function (err, data) {
