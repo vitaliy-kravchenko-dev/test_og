@@ -8,12 +8,7 @@ router.get('/', function (req, res) {
   var result = {};
   var custom_url = req.query.url;
   var options = {
-    url: custom_url || 'http://ogp.me/',
-    headers: {
-      'accept': 'text/html',
-      'accept-encoding': "gzip, deflate, br",
-      'user-agent': 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3'
-    }
+    url: custom_url || 'http://ogp.me/'
   };
 
   request(options, function (err, response) {
